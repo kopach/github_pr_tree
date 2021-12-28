@@ -27,7 +27,13 @@ export const createTree = ({ nodeLabel, list, href, hasComments, isDeleted, diff
   const rawChildren = list.map(node => createTree({ ...node, visibleElement, filter, hideViewed }))
 
   return (
-    <Folder key={nodeLabel} nodeLabel={nodeLabel} isViewed={rawChildren.every(child => child.props.isViewed)} hideViewed={hideViewed}>
+    <Folder
+      key={nodeLabel}
+      nodeLabel={nodeLabel}
+      isViewed={rawChildren.every(child => child.props.isViewed)}
+      filter={filter}
+      hideViewed={hideViewed}
+    >
       {rawChildren.map(node => (
         <span key={node.key}>
           {node}
