@@ -185,11 +185,13 @@ class Tree extends React.Component {
   }
 
   render () {
-    const { root, filter, show, visibleElement, hideViewed } = this.state
+    const { filter, show, visibleElement, hideViewed } = this.state
 
     if (!show) {
       return null
     }
+
+    const filtered = createFileTree(filter).tree
 
     return (
       <div>
@@ -206,7 +208,7 @@ class Tree extends React.Component {
         />
         <div className='file-container'>
           <div>
-            {root.list.map(node => (
+            {filtered.list.map(node => (
               <span key={node.nodeLabel}>
                 {createTree({ ...node, visibleElement, filter, hideViewed })}
               </span>
