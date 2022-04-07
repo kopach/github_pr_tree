@@ -21,14 +21,14 @@ class Folder extends React.Component {
   }
 
   render () {
-    const { children, nodeLabel, isViewed, filter, hideViewed } = this.props
+    const { children, nodeLabel, isViewed, filter, hideViewed, fileCount } = this.props
 
     const index = filter ? (nodeLabel.toLowerCase() || '').indexOf(filter.toLowerCase()) : -1
     const displayName = (index === -1) ? nodeLabel : this.getHighlight({ nodeLabel, filter, index })
 
     const display = (
-      <div>
-        {displayName}
+      <div className='github-pr-folder-label'>
+        {displayName} {fileCount && <span className='github-pr-folder-count-label'>({fileCount})</span>}
         {isViewed
           ? (
             <svg className='github-pr-file-checkmark octicon octicon-check' viewBox='0 0 12 16' version='1.1' width='12' height='16' aria-hidden='true'>
