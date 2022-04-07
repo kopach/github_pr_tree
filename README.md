@@ -2,7 +2,7 @@
 
 ---
 
-> Since maintainer of [original repo](https://github.com/berzniz/github_pr_tree) do not merge PR for quite a while now, I decided to merge most of them to this Fork repo. Then I buiud the extension locally and upload to Browser.
+> Since maintainer of [original repo](https://github.com/berzniz/github_pr_tree) do not merge PR for quite a while now, I decided to merge most of them to this Fork repo. Then I buiud the extension locally (with `NODE_ENV=production npm run build-firefox` or `NODE_ENV=production npm run build-chrome` and upload to Browser.
 
 ---
 
