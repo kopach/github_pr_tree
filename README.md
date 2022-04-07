@@ -1,5 +1,11 @@
 # Better Pull Requests for GitHub
 
+---
+
+> Since maintainer of [original repo](https://github.com/berzniz/github_pr_tree) do not merge PR for quite a while now, I decided to merge most of them to this Fork repo. Then I buiud the extension locally and upload to Browser.
+
+---
+
 Chrome and Firefox browser extension to show a file tree on GitHub's Pull Request pages.
 
 - Browse pull requests with an IDE like file tree
